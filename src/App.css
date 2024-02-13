@@ -1,0 +1,321 @@
+.container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 4vh;
+    background-color: #7877E6;
+    width: 100vw;
+}
+
+.comp-logo:hover, .settings:hover, .help:hover, .user-options .user-profile:hover {
+    background-color: #504f9b;
+    cursor: pointer;
+}
+
+.comp-logo, .user-options {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    transition: 0.1s;
+}
+
+.comp-logo {
+    margin-left: 15px;   
+    padding: 0 5px;
+}
+
+.comp-logo img {
+    height: 25px;
+    margin-right: 10px;
+}
+
+.icons {
+    font-size: 20px;
+}
+
+.user-options {
+    margin-right: 15px;
+}
+
+.user-options .settings, .user-options .help {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 4vh;
+    height: 100%;
+}
+
+.user-options .user-profile {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 5px;
+}
+
+.content {
+    width: 80vw;
+}
+
+.content .heading, .result-heading {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.content textarea {
+    width: 1100px;
+    height: 370px;
+    resize: none;
+    padding: 5px;
+}
+
+.content .prompts {
+    display: flex;
+}
+
+.content .prompt-textarea {
+    padding-right: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.prompts {
+    margin-bottom: 40px;
+}
+
+.prompt-types {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#spd, #scd, #plid {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33.3%;
+    color: white;
+}
+
+.prompt-types button {
+    height: 75px;
+    width: 50%;
+    color: white;
+    max-width: 75%;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: none;
+    background-color: #7877E6;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.prompt-types button:hover {
+    box-shadow: 1px 1px 2px 2px #504f9b;
+}
+
+.run-btn button{
+    height: 35px;
+    width: 80px;
+    background-color: #7877E6;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: white;
+}
+
+.results button {
+    position: relative;
+    border: none;
+    outline: none;
+    background: none;
+    height: 40px;
+    font-size: 20px;
+    padding: 0;
+    width: 80px;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+.results button:nth-of-type(2) {
+    margin-left: 10px;
+}
+
+.results button:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.results .result-btn::after,
+.results .json-btn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #7877e6;
+    transition: width 0.2s;
+}
+
+.results .result-btn.active-btn::after,
+.results .json-btn.active-btn::after {
+    width: 80%;
+}
+
+.results .result-btn:hover::after,
+.results .json-btn:hover::after {
+    width: 100%;
+}
+
+.output-area {
+    border: 1px solid rgb(200, 200, 200);
+    padding: 15px;
+    font-size: 15px;
+    margin-bottom: 50px;
+    min-height: 40vh;
+}
+
+#pii, #cards, #sort-option, #filter-option {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.result-options p{
+    margin-right: 5px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card-row {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 1px 2px rgb(235, 235, 235);
+    height: 100px;
+    width: 190px;
+    padding: 5px;
+}
+
+.card:first-of-type {
+    margin-left: 0;
+}
+
+.card .card-heading {
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+}
+
+.card.datetime .card-heading, .text-datetime {
+    border-bottom: 2px solid #029DD4;
+}
+
+.card.persontype .card-heading, .text-persontype {
+    border-bottom: 2px solid #A80088;
+}
+
+.card.organization .card-heading, .text-organization{
+    border-bottom: 2px solid #0166AC;
+}
+
+.card.person .card-heading, .text-person {
+    border-bottom: 2px solid #018A39;
+}
+
+.card.address .card-heading, .text-address {
+    border-bottom: 2px solid #FABE14;
+}
+
+.card.email .card-heading, .text-email {
+    border-bottom: 2px solid #7CC102;
+}
+
+.card .card-desc {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.prompt-text {
+    line-height: 3;
+    height: 30vh;
+    width: 100%;
+}
+
+.copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(65, 65, 241);
+}
+
+.copy-btn p {
+    cursor: pointer;
+    margin: 0;
+}
+
+.copy-btn .copy-icon {
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    color: rgb(129, 129, 255);
+}
+
+.alert-msg {
+    position: fixed;
+    top: 10px;
+}
+
+.help-links {
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline blue;
+}
+
+.help-links a {
+    margin-bottom: 15px;
+}
+
+.empty-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-result img {
+    width: 300px;
+}
+
+.dim-bg {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.5);
+}

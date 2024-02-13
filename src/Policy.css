@@ -1,0 +1,84 @@
+
+.select-policies {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    border-radius: 5px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #7877e6;
+    z-index: 10;
+}
+
+.form-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    width: 100%;
+}
+
+.form-navbar p {
+    margin: 0;
+    border-bottom: 2px solid black;
+}
+
+.form-navbar .close-btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 30px;
+}
+
+.save-policies-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: 1px solid #7877E6;
+    background-color: rgba(55, 53, 141, 0.6);
+    height: 40px;
+    width: 100px;
+    align-self: flex-end;
+    margin-right: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: 0.2s ease-in;
+}
+
+.save-policies-btn:hover {
+    background: rgba(55, 53, 141, 0.8);
+}
+
+.policies-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    height: 75%;
+}
+
+.policy-option {
+    height: 50px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.policy-option input{
+    margin-right: 10px;
+}
+
+.policy-row {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
