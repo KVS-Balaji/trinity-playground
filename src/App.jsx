@@ -135,41 +135,42 @@ function App() {
       </div>
       <div className="content">
         <p className="heading">Try out our tool by typing some text below</p>
-        <div className="prompts">
-          <div className="prompt-textarea">
+        <div className="user-input">
+          <div className="input-textarea">
             <textarea
               value={text}
               id="prompt-area"
               onChange={handleTextareaChange}
             />
-            <div
-              style={{ textAlign: "right", color: "gray", fontSize: "12px" }}
-            >
-              {text.length}/{maxCharacters}
-            </div>
           </div>
-          <div className="prompt-types">
-            <div id="spd">
-              <Popover content={SPDContent} placement="right">
-                <button onClick={selectSPDPolicies}>
-                  Sensitive Personal Data
-                </button>
-              </Popover>
-            </div>
-            <div id="scd">
-              <Popover content={SCDContent} placement="right">
-                <button onClick={selectSCDPolicies}>
-                  Sensitive Company Data
-                </button>
-              </Popover>
-            </div>
-            <div id="plid">
-              <Popover content={PLIDContent} placement="right">
-                <button onClick={selectPLIDPolicies}>
-                  Privacy Laws Impacting Data
-                </button>
-              </Popover>
-            </div>
+          <div
+            id="characters"
+            style={{ textAlign: "right", color: "gray", fontSize: "12px" }}
+          >
+            {text.length}/{maxCharacters}
+          </div>
+        </div>
+        <div className="policy-types">
+          <div id="spd">
+            <Popover content={SPDContent} placement="right">
+              <button onClick={selectSPDPolicies}>
+                Sensitive Personal Data
+              </button>
+            </Popover>
+          </div>
+          <div id="scd">
+            <Popover content={SCDContent} placement="right">
+              <button onClick={selectSCDPolicies}>
+                Sensitive Company Data
+              </button>
+            </Popover>
+          </div>
+          <div id="plid">
+            <Popover content={PLIDContent} placement="right">
+              <button onClick={selectPLIDPolicies}>
+                Privacy Laws Impacting Data
+              </button>
+            </Popover>
           </div>
         </div>
         <div className="run-btn">
