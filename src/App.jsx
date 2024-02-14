@@ -85,31 +85,31 @@ function App() {
   }
 
   const SPDContent = (
-    <div>
+    <>
       {selectedSPDPolicies.length > 0 ? (
         selectedSPDPolicies.map((policy, index) => <p key={index}>{policy}</p>)
       ) : (
-        <p>No Policies Selected</p>
+        <div>No Policies Selected</div>
       )}
-    </div>
+    </>
   );
 
   const SCDContent = (
     <div>
-      {selectedSCDPolicies.length > 0 ? (
-        selectedSCDPolicies.map((policy, index) => <p key={index}>{policy}</p>)
+      {selectedSPDPolicies.length > 0 ? (
+        selectedSPDPolicies.map((policy, index) => <p key={index}>{policy}</p>)
       ) : (
-        <p>No Policies Selected</p>
+        <div>No Policies Selected</div>
       )}
     </div>
   );
 
   const PLIDContent = (
     <div>
-      {selectedPLIDPolicies.length > 0 ? (
-        selectedPLIDPolicies.map((policy, index) => <p key={index}>{policy}</p>)
+      {selectedSPDPolicies.length > 0 ? (
+        selectedSPDPolicies.map((policy, index) => <p key={index}>{policy}</p>)
       ) : (
-        <p>No Policies Selected</p>
+        <div>No Policies Selected</div>
       )}
     </div>
   );
@@ -152,23 +152,53 @@ function App() {
         </div>
         <div className="policy-types">
           <div id="spd">
-            <Popover content={SPDContent} placement="right">
+            <Popover placement="right" content={SPDContent}>
               <button onClick={selectSPDPolicies}>
-                Sensitive Personal Data
+                <div className="btn-heading">Sensitive Personal Data</div>
+                <div className="policy-content">
+                  {selectedSPDPolicies.length > 0 ? (
+                    <p>
+                      {selectedSPDPolicies.join(", ").slice(0, 25)}
+                      {selectedSPDPolicies.join(", ").length > 25 && "..."}
+                    </p>
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
               </button>
             </Popover>
           </div>
           <div id="scd">
-            <Popover content={SCDContent} placement="right">
+            <Popover placement="right" content={SCDContent}>
               <button onClick={selectSCDPolicies}>
-                Sensitive Company Data
+                <div className={`btn-heading`}>Sensitive Company Data</div>
+                <div className="policy-content">
+                  {selectedSCDPolicies.length > 0 ? (
+                    <p>
+                      {selectedSCDPolicies.join(", ").slice(0, 25)}
+                      {selectedSCDPolicies.join(", ").length > 25 && "..."}
+                    </p>
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
               </button>
             </Popover>
           </div>
           <div id="plid">
-            <Popover content={PLIDContent} placement="right">
+            <Popover placement="right" content={PLIDContent}>
               <button onClick={selectPLIDPolicies}>
-                Privacy Laws Impacting Data
+                <div className="btn-heading">Privacy Laws Impacting Data</div>
+                <div className="policy-content">
+                  {selectedPLIDPolicies.length > 0 ? (
+                    <p>
+                      {selectedPLIDPolicies.join(", ").slice(0, 25)}
+                      {selectedPLIDPolicies.join(", ").length > 25 && "..."}
+                    </p>
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
               </button>
             </Popover>
           </div>

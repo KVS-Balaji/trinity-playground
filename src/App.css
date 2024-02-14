@@ -123,11 +123,27 @@
     border: none;
     outline: none;
     font-size: 15px;
-    border-radius: 5px;
     box-shadow: none;
     background-color: #7877E6;
     cursor: pointer;
     transition: 0.2s ease-in;
+    font-weight: 600;
+}
+
+button .btn-heading {
+    margin-top: 10px;
+}
+
+button .policy-content {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+button .policy-content p {
+    margin: 0;
 }
 
 .policy-types button:hover {
