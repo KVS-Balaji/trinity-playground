@@ -96,8 +96,8 @@ function App() {
 
   const SCDContent = (
     <div>
-      {selectedSPDPolicies.length > 0 ? (
-        selectedSPDPolicies.map((policy, index) => <p key={index}>{policy}</p>)
+      {selectedSCDPolicies.length > 0 ? (
+        selectedSCDPolicies.map((policy, index) => <p key={index}>{policy}</p>)
       ) : (
         <div>No Policies Selected</div>
       )}
@@ -106,8 +106,8 @@ function App() {
 
   const PLIDContent = (
     <div>
-      {selectedSPDPolicies.length > 0 ? (
-        selectedSPDPolicies.map((policy, index) => <p key={index}>{policy}</p>)
+      {selectedPLIDPolicies.length > 0 ? (
+        selectedPLIDPolicies.map((policy, index) => <p key={index}>{policy}</p>)
       ) : (
         <div>No Policies Selected</div>
       )}
